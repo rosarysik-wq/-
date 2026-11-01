@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf8>
+    <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    </head>
+    <body>
+<title>Путь пробуждения</title>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>
+    </symbol>
+    <symbol id="i-left" viewBox="0 0 24 24">
+      <path d="M15 5l-7 7 7 7"/>
+    </symbol>
+    <symbol id="i-right" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M5 5l14 14M19 5L5 19"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/>
+      <circle cx="12" cy="9.5" r="2.4"/>
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="15" rx="3"/>
+      <path d="M8 3v4M16 3v4M4 10h16M9 15l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24">
+      <path d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5V19c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5z"/>
+      <path d="M12 6v13.5"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="i-people" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3"/>
+      <path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 5.5a3 3 0 0 1 0 5.8M17.5 14a5 5 0 0 1 3.5 5"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="M12 3l9 5-9 5-9-5z"/>
+      <path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/>
+    </symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24">
+      <path d="M3 9h11a2.5 2.5 0 1 0-2.5-2.5"/>
+      <path d="M3 14h14.5a2.5 2.5 0 1 1-2.5 2.5"/>
+    </symbol>
+    <symbol id="i-body" viewBox="0 0 24 24">
+      <circle cx="12" cy="5" r="2.2"/>
+      <path d="M12 8v6M7 11l5-1 5 1M9 21l3-7 3 7"/>
+    </symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24">
+      <path d="M7 18a4 4 0 0 1-.6-7.96A5.5 5.5 0 0 1 17 9.5 3.8 3.8 0 0 1 17.5 18z"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/>
+    </symbol>
+    <symbol id="i-mirror" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="10" rx="6" ry="7.5"/>
+      <path d="M12 17.5V22M8.5 22h7"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="sheet">
+  <header class="top">
+    <a class="logo" href="#top">ДХАРМА</a>
+    <nav aria-label="Разделы">
+      <ul>
+        <li><a href="#top">Главная</a></li>
+        <li><a href="#history">История</a></li>
+        <li><a href="#practice">Практики</a></li>
+        <li><a href="#teaching">Учение</a></li>
+        <li><a href="#schools">Школы</a></li>
+      </ul>
+    </nav>
+    <div class="search" id="search">
+      <label for="q">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-search"/>
+        </svg>
+        <input id="q" type="search" placeholder="Найти практику, эпоху или школу" autocomplete="off" aria-controls="results">
+      </label>
+      <div class="results" id="results" role="listbox" aria-label="Результаты поиска">
+      </div>
+    </div>
+    <button class="btn" type="button" data-open="breath-body">Начать практику</button>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <img class="hero-img" src="img/Каменная статуя Будды.jpg"><div class="hero-copy">
+        <div class="mark">
+          <h1>ДХАРМА</h1>
+          <span>БУДДИЗМ</span>
+        </div>
+        <p>История буддизма и простые практики, которые помогают лучше понять самого себя. У каждой практики есть своя история.</p>
+        <div class="acts">
+          <a class="btn white lg" href="#practice">Начать практику</a>
+          <a class="btn line lg" href="#history">Читать историю</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="why" id="why">
+      <div>
+        <span class="eyebrow">О чём этот сайт</span>
+        <h2>Почему буддизм помогает понять себя</h2>
+        <p class="lead">Буддизм начинается с простого вопроса: что происходит в моём уме прямо сейчас? 
+          За две с половиной тысячи лет сложились способы наблюдать мысли, тело и поступки так, чтобы видеть себя яснее и спокойнее.</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="dot">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-clock"/>
+              </svg>
+            </span>
+            <b>2 500+</b>
+            <span>лет живой традиции наблюдения</span>
+          </div>
+          <div class="stat">
+            <span class="dot">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-people"/>
+              </svg>
+            </span>
+            <b>≈500 млн</b>
+            <span>буддистов в мире сегодня</span>
+          </div>
+          <div class="stat">
+            <span class="dot">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-layers"/>
+              </svg>
+            </span>
+            <b>3</b>
+            <span>основные традиции с общей основой</span>
+          </div>
+        </div>
+      </div>
+      <div class="feats">
+        <div class="feat">
+          <span class="tile">
+            <svg class="ico" aria-hidden="true" style="stroke-width:1.6">
+              <use href="#i-eye"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Наблюдение, а не вера</h3>
+            <p>Будда предлагал проверять учение на собственном опыте. Здесь ничего не нужно принимать на слово.</p>
+          </div>
+        </div>
+        <div class="feat">
+          <span class="tile">
+            <svg class="ico" aria-hidden="true" style="stroke-width:1.6"><use href="#i-cal"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Практики на каждый день</h3><p>Короткие упражнения без наставника и снаряжения. Достаточно пяти минут тишины.</p>
+          </div>
+        </div>
+        <div class="feat">
+          <span class="tile">
+            <svg class="ico" aria-hidden="true" style="stroke-width:1.6">
+              <use href="#i-book"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Притчи вместо лекций</h3>
+            <p>У каждой практики есть история, которая объясняет, зачем она нужна и как её пробовать.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history">
+      <div class="dh">
+        <div>
+          <span class="eb">История</span>
+          <h2>Путь буддизма сквозь века и страны</h2>
+        </div>
+        <p>От дерева в Бодхгае до больниц и школ нашего времени. Нажмите «Подробнее», чтобы прочитать рассказ об эпохе.</p>
+      </div>
+      <div class="dgrid">
+        <button class="dcard" type="button" data-open="e1"><img class="dc-img" alt="" aria-hidden="true" style="--pos:22% 100%" src="img/пробуждение под деревом.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">VI–V вв. до н. э.</span>
+            <span class="dc-title">Пробуждение под деревом</span></span>
+            <span class="dc-pill">Подробнее</span>
+          </button>
+        <button class="dcard" type="button" data-open="e2">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 60%" src="img/империя ашоки.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">III в. до н. э.</span>
+          <span class="dc-title">Империя Ашоки</span></span>
+          <span class="dc-pill">Подробнее</span>
+        </button>
+        <button class="dcard" type="button" data-open="e3">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 45%" src="img/палийский канон.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">I в. до н. э.</span>
+          <span class="dc-title">Палийский канон</span></span>
+          <span class="dc-pill">Подробнее</span>
+        </button>
+        <button class="dcard" type="button" data-open="e4">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 30%" src="img/шёлковый путь.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">I в. н. э.</span>
+          <span class="dc-title">Шёлковый путь</span></span>
+          <span class="dc-pill">Подробнее</span>
+        </button>
+        <button class="dcard" type="button" data-open="e6">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 85%" src="img/корея и япония.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">IV–VI вв.</span>
+          <span class="dc-title">Корея и Япония</span></span>
+          <span class="dc-pill">Подробнее</span>
+        </button>
+        <button class="dcard" type="button" data-open="e5">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 40%" src="img/страна снегов.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">VII–VIII вв.</span>
+            <span class="dc-title">Страна снегов</span></span>
+            <span class="dc-pill">Подробнее</span>
+          </button>
+        <button class="dcard" type="button" data-open="e7">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 55%" src="img/буддизм в россии.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">1741 г.</span>
+            <span class="dc-title">Буддизм в России</span></span>
+            <span class="dc-pill">Подробнее</span>
+          </button>
+        <button class="dcard" type="button" data-open="e8">
+          <img class="dc-img" alt="" aria-hidden="true" style="--pos:50% 56%" src="img/новый свет.jpg">
+          <span class="dc-txt">
+            <span class="dc-date">XX век</span>
+            <span class="dc-title">Новый свет</span></span>
+            <span class="dc-pill">Подробнее</span>
+          </button>
+      </div>
+    </section>
+
+    <section id="practice">
+      <div class="prac">
+        <img class="prac-img" alt="" aria-hidden="true" src="img/самопознание.jpg">
+        <div class="dh">
+          <div>
+            <span class="eb">Самопознание</span>
+            <h2>Шесть способов понять себя</h2>
+          </div>
+          <p>У каждой практики есть своя история. Выберите одну, прочитайте её и попробуйте прямо сейчас.</p>
+        </div>
+        <div class="pk">
+          <div class="minute">
+            <div>
+              <span class="mn-eb">Попробовать сейчас</span>
+              <h3>Минута тишины</h3>
+              <p style="margin-top:12px">Дыхательный круг на одну минуту. Вдох четыре секунды, выдох шесть.</p>
+            </div>
+            <div class="breath-deco" aria-hidden="true"><i></i></div>
+            <button class="btn white lg" type="button" data-open="minute">Начать</button>
+          </div>
+          <div class="pcards">
+          <button class="pcard" type="button" data-open="breath-body"><span class="pc-top">
+            <span class="pc-ic"><svg class="ico" aria-hidden="true">
+              <use href="#i-wind"/></svg>
+            </span>
+            <span class="pc-time">5 мин</span></span>
+            <span class="pc-tag">Анапанасати</span>
+            <span class="pc-title">Дыхание</span>
+            <span class="pc-desc">Как научиться возвращаться к себе</span>
+            <span class="pc-more">Читать и пробовать <svg class="ico" aria-hidden="true">
+              <use href="#i-right"/></svg>
+            </span>
+          </button>
+          <button class="pcard" type="button" data-open="body">
+            <span class="pc-top">
+              <span class="pc-ic">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-body"/></svg>
+                </span>
+                <span class="pc-time">10 мин</span>
+              </span>
+                <span class="pc-tag">Сканирование тела</span>
+                <span class="pc-title">Тело</span>
+                <span class="pc-desc">Как услышать то, что оно говорит</span>
+                <span class="pc-more">Читать и пробовать 
+                  <svg class="ico" aria-hidden="true">
+                  <use href="#i-right"/>
+                </svg>
+                </span>
+              </button>
+          <button class="pcard" type="button" data-open="thoughts">
+            <span class="pc-top"><span class="pc-ic">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-cloud"/>
+              </svg>
+            </span>
+                <span class="pc-time">10 мин</span>
+              </span>
+              <span class="pc-tag">Называние мыслей</span>
+              <span class="pc-title">Мысли</span>
+              <span class="pc-desc">Как не получать вторую стрелу</span>
+              <span class="pc-more">Читать и пробовать <svg class="ico" aria-hidden="true">
+                <use href="#i-right"/>
+              </svg>
+            </span>
+           </button>
+          <button class="pcard" type="button" data-open="metta">
+            <span class="pc-top">
+              <span class="pc-ic">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-heart"/>
+                </svg>
+              </span>
+              <span class="pc-time">10 мин</span>
+            </span>
+            <span class="pc-tag">Метта</span>
+            <span class="pc-title">Доброта к себе</span>
+            <span class="pc-desc">Как стать себе союзником</span>
+            <span class="pc-more">Читать и пробовать <svg class="ico" aria-hidden="true">
+              <use href="#i-right"/>
+            </svg>
+          </span>
+        </button>
+          <button class="pcard" type="button" data-open="self">
+            <span class="pc-top"><span class="pc-ic">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-mirror"/>
+              </svg>
+            </span>
+            <span class="pc-time">5 мин</span>
+          </span>
+          <span class="pc-tag">Анатта</span>
+          <span class="pc-title">Кто я</span>
+          <span class="pc-desc">Как найти того, кто говорит «я»</span>
+          <span class="pc-more">Читать и пробовать 
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-right"/>
+            </svg>
+          </span>
+        </button>
+          <button class="pcard" type="button" data-open="evening">
+            <span class="pc-top">
+              <span class="pc-ic">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-moon"/>
+                </svg>
+              </span>
+              <span class="pc-time">5 мин</span>
+            </span>
+            <span class="pc-tag">Вечерний обзор</span>
+            <span class="pc-title">Итог дня</span> 
+            <span class="pc-desc">Как смотреть на свои поступки</span>
+            <span class="pc-more">Читать и пробовать 
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-right"/>
+              </svg>
+            </span>
+          </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="steps-h">
+        <h2>Четыре истины и восемь шагов</h2>
+        <p>Будда говорил как врач: назвал болезнь, нашёл причину, показал, что выздоровление возможно, и предложил лечение.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="brk">I</span>
+          <h3>Страдание</h3>
+          <p>Жизнь пронизана неудовлетворённостью: болезнь, утрата, тревога, ощущение, что чего-то не хватает.</p>
+        </div>
+        <div class="step">
+          <span class="brk">II</span>
+          <h3>Причина</h3>
+          <p>Страдание растёт из жажды и цепляния: мы держимся за приятное и отталкиваем неприятное.</p>
+        </div>
+        <div class="step">
+          <span class="brk">III</span>
+          <h3>Прекращение</h3>
+          <p>Когда жажда отпускает, страдание затихает. Это состояние называют нирваной, «угасанием».</p>
+        </div>
+        <div class="step">
+          <span class="brk">IV</span>
+          <h3>Путь</h3>
+          <p>Освобождение достигается практикой, срединным путём между роскошью и самоистязанием.</p>
+        </div>
+      </div>
+      <div class="path">
+        <h3>Благородный восьмеричный путь</h3>
+        <div class="pills">
+          <span class="pill">Понимание</span>
+          <span class="pill">Намерение</span>
+          <span class="pill">Речь</span>
+          <span class="pill">Действие</span>
+          <span class="pill">Образ жизни</span>
+          <span class="pill">Усилие</span>
+          <span class="pill">Осознанность</span>
+          <span class="pill">Сосредоточение</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="schools">
+      <div class="panel">
+        <div class="ph">
+          <h2>Три колесницы</h2>
+          <p>За века буддизм разделился на несколько традиций. Они согласны в основах и расходятся в акцентах и методах.</p>
+        </div>
+        <div class="schools">
+          <article class="school">
+            <span class="where">Шри-Ланка, Таиланд, Мьянма</span>
+            <h3>Тхеравада</h3>
+            <p>«Учение старейшин». Опирается на Палийский канон и держится близко к ранней общине. Особое место занимает випассана, прозрение через наблюдение.</p>
+            <p class="ideal">Идеал: архат, достигший освобождения.</p>
+          </article>
+          <article class="school">
+            <span class="where">Китай, Корея, Япония, Вьетнам</span>
+            <h3>Махаяна</h3>
+            <p>«Большая колесница». Подчёркивает сострадание и пустотность явлений. К ней относятся чань и дзен с упором на прямой опыт, а также школы Чистой земли.</p>
+            <p class="ideal">Идеал: бодхисаттва, идущий к пробуждению ради всех.</p>
+          </article>
+          <article class="school">
+            <span class="where">Тибет, Монголия, Бурятия, Калмыкия, Тува</span>
+            <h3>Ваджраяна</h3>
+            <p>Тибетский буддизм. Сочетает философские диспуты, ритуал, визуализации и тантрические практики.
+               Учение передаётся от учителя к ученику, среди учителей есть Далай-лама.</p>
+               <p class="ideal">Идеал: пробуждение в одной жизни.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#top">ДХАРМА</a>
+    <div class="fl">
+      <a href="#history">История</a>
+      <a href="#practice">Практики</a>
+      <a href="#teaching">Учение</a>
+      <a href="#schools">Школы</a>
+    </div>
+    <p>Страница носит ознакомительный характер. Практики внимательности помогают многим, но не заменяют помощь врача или психолога.
+       Если вам тяжело, обратитесь к специалисту.</p>
+  </footer>
+</div>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">
+    <button class="x" id="close" type="button" aria-label="Закрыть"><svg class="ico" aria-hidden="true">
+      <use href="#i-x"/>
+    </svg>
+  </button>
+    <div id="m-body">
+
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
